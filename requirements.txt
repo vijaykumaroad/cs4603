@@ -19,3 +19,5 @@ pprintpp
 pypdf
 bs4
 markitdown 
+streamlit
+streamlit-chat

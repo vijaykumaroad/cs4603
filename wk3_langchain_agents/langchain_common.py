@@ -1,10 +1,8 @@
-"""Shared setup helpers for Databricks + OpenAI notebooks."""
-
 from dataclasses import dataclass
 import os
 
 from dotenv import load_dotenv
-import pprintpp
+from typing import Union
 
 from langchain_openai import ChatOpenAI
 from langchain_openai import OpenAIEmbeddings
@@ -16,10 +14,14 @@ from langchain_postgres import PGVector
 from langchain_community.document_loaders import WebBaseLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.output_parsers import StrOutputParser
+from langchain_core.tools import tool
+from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
+from langchain.agents import create_agent
 
 import openai
 import json
 import warnings
+import pprintpp
 
 def enable_logging():
     import logging
@@ -85,12 +87,14 @@ def create_databricks_client(config: DatabricksConfig) -> openai.OpenAI:
         model=config.endpoint,
         api_key=config.token,
         base_url=f"{config.host}/serving-endpoints",
+        temperature=0,
     )
     llm_noreason = ChatOpenAI(
         model=config.endpoint,
         api_key=config.token,
         base_url=f"{config.host}/serving-endpoints",
         reasoning_effort="none",
+        temperature=0,
     )
     databricks_embeddings = OpenAIEmbeddings(
         model="databricks-gte-large-en",
