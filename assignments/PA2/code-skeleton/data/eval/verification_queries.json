@@ -1,0 +1,26 @@
+[
+  {
+    "id": "q-1",
+    "query": "What is retrieval-augmented generation?",
+    "expected_source": "RAG_PAPER.pdf",
+    "should_pass": true
+  },
+  {
+    "id": "q-2",
+    "query": "How does RAPTOR build hierarchical summaries?",
+    "expected_source": "RAPTOR.pdf",
+    "should_pass": true
+  },
+  {
+    "id": "q-3",
+    "query": "What are the key components of a RAG pipeline?",
+    "expected_source": "rag_research_paper-1.pdf",
+    "should_pass": true
+  },
+  {
+    "id": "q-4",
+    "query": "What is the capital of France?",
+    "expected_source": null,
+    "should_pass": false
+  }
+]

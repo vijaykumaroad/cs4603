@@ -1,0 +1,23 @@
+[
+  {
+    "id": "q-raptor-1",
+    "question": "Summarize the key findings about retrieval-augmented generation across the research papers in the corpus.",
+    "difficulty": "theme",
+    "expected_level": 1,
+    "rationale": "Theme-level question that requires synthesizing information from multiple documents. RAPTOR's hierarchical summaries should handle this better than flat retrieval."
+  },
+  {
+    "id": "q-raptor-2",
+    "question": "What are the common challenges and limitations of RAG systems mentioned across the papers?",
+    "difficulty": "theme",
+    "expected_level": 2,
+    "rationale": "Multi-document synthesis question. Requires information from multiple chunks across different papers."
+  },
+  {
+    "id": "q-raptor-3",
+    "question": "How do the papers describe the relationship between chunk size and retrieval quality?",
+    "difficulty": "theme",
+    "expected_level": 1,
+    "rationale": "Specific technical theme that spans multiple documents. Tests RAPTOR's ability to find cross-document patterns."
+  }
+]

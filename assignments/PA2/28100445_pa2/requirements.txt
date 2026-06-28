@@ -1,0 +1,27 @@
+# Parts 0-2 (local): pip install -r requirements.txt
+# Parts 3-5 (Databricks): %pip install in notebooks
+
+# ---- Core (Parts 0-2) ----
+openai
+python-dotenv
+langchain
+langchain-openai
+langchain-postgres
+langchain-core
+langchain-text-splitters
+langchain_classic
+langchain-community
+psycopg[binary]
+tiktoken
+pypdf
+pydantic
+nltk
+numpy
+
+# ---- Databricks (Parts 3-5) ----
+databricks-langchain
+databricks-ai-search
+databricks-sdk
+mlflow
+umap-learn
+scikit-learn

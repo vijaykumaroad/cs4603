@@ -1,0 +1,4 @@
+- CREATE TABLE documents (id serial PRIMARY KEY, label text, emb vector(3));
+- \d documents
+- INSERT INTO documents (label, emb) VALUES ('x-axis', '[1,0,0]'), ('y-axis', '[0,1,0]'), ('off-axis', '[0.5,0.5,0.7]');
+- SELECT label, emb <=> '[0.1, 0.2, 0.3]'::vector AS distance FROM documents ORDER BY distance LIMIT 1;
