@@ -1,0 +1,12 @@
+openai
+databricks-sdk
+databricks-openai
+mlflow[databricks]>=3.1
+tiktoken
+pydantic
+pandas
+pyyaml
+jinja2
+ipykernel
+ipywidgets
+python-dotenv
